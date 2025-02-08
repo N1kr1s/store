@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorElement from './components/ErrorElement';
 import {
   About,
   Cart,
@@ -23,30 +24,37 @@ const router = createBrowserRouter(
         {
           index: true,
           element: <Landing />,
+          errorElement: <ErrorElement />,
         },
         {
           path: 'products',
           element: <Products />,
+          errorElement: <ErrorElement />,
         },
         {
           path: 'products/:id',
           element: <SingleProduct />,
+          errorElement: <ErrorElement />,
         },
         {
           path: 'cart',
           element: <Cart />,
+          errorElement: <ErrorElement />,
         },
         {
           path: 'about',
           element: <About />,
+          errorElement: <ErrorElement />,
         },
         {
           path: 'checkout',
           element: <Checkout />,
+          errorElement: <ErrorElement />,
         },
         {
           path: 'orders',
           element: <Orders />,
+          errorElement: <ErrorElement />,
         },
       ],
     },
