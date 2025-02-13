@@ -1,12 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { productImages } from '@/lib/productImages';
 import { formatAsDollars, ProductsResponse } from '@/utils';
 import { Link, useLoaderData } from 'react-router-dom';
-
-const productImages = [
-  { name: 'Lamp', src: '/lamp.jpg' },
-  { name: 'coffeeTable', src: '/coffee_table.jpg' },
-  { name: 'Bed', src: '/bed.jpg' },
-];
 
 const ProductsGrid = () => {
   const { data: products } = useLoaderData() as ProductsResponse;
@@ -16,7 +11,7 @@ const ProductsGrid = () => {
       {products.map((product, idx) => {
         const { title, price } = product.attributes;
         const dollarsAmount = formatAsDollars(price);
-        const image = productImages[idx].src;
+        const image = productImages[idx]?.src;
         return (
           <Link to={`/products/${product.id}`} key={product.id}>
             <Card>
