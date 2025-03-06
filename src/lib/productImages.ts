@@ -14,4 +14,6 @@ export const productImages = [
   { name: 'stylish_bed', src: '/stylish_bed.jpg', id: 15 },
   { name: 'modern_table', src: '/modern_table.jpg', id: 9 },
   { name: 'streamlined_table', src: '/streamlined_table.jpg', id: 14 },
+  { name: 'sectional_sofa', src: '/sectional_sofa.jpg', id: 25 },
+  { name: 'velvet_sofa', src: '/velvet_sofa.jpg', id: 17 },
 ];
