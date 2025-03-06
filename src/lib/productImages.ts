@@ -10,4 +10,8 @@ export const productImages = [
   { name: 'kingBed', src: '/kingBed.jpg', id: 22 },
   { name: 'loungeChair', src: '/loungeChair.jpg', id: 24 },
   { name: 'sleek_chair', src: '/sleek_chair.jpg', id: 4 },
+  { name: 'sleek_bed', src: '/sleek_bed.jpg', id: 10 },
+  { name: 'stylish_bed', src: '/stylish_bed.jpg', id: 15 },
+  { name: 'modern_table', src: '/modern_table.jpg', id: 9 },
+  { name: 'streamlined_table', src: '/streamlined_table.jpg', id: 14 },
 ];
