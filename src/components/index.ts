@@ -5,6 +5,7 @@ export { default as Header } from './Header';
 export { default as Hero } from './Hero';
 export { default as HeroCarousel } from './HeroCarousel';
 export { default as LinksDropdown } from './LinksDropdown';
+export { default as Loading } from './Loading.tsx';
 export { default as Logo } from './Logo';
 export { default as ModeToggle } from './ModeToggle';
 export { default as Navbar } from './Navbar';

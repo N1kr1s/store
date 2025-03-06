@@ -2,15 +2,15 @@ import { productImages } from '@/lib/productImages';
 import { formatAsDollars, type ProductsResponse } from '@/utils';
 import { Link, useLoaderData } from 'react-router-dom';
 import { Card, CardContent } from './ui/card';
-const ProductList = () => {
+const ProductsList = () => {
   const { data: products } = useLoaderData() as ProductsResponse;
 
   return (
     <div className='mt-12 grid gap-y-8'>
-      {products.map((product, idx) => {
+      {products.map((product) => {
         const { title, price, company } = product.attributes;
         const dollarsAmount = formatAsDollars(price);
-        const image = productImages[idx].src;
+        const image = productImages.find((img) => img.id === product.id)?.src;
 
         return (
           <Link key={product.id} to={`/products/${product.id}`}>
@@ -35,4 +35,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default ProductsList;

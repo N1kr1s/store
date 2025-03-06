@@ -8,10 +8,11 @@ const ProductsGrid = () => {
 
   return (
     <div className='pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 '>
-      {products.map((product, idx) => {
+      {products.map((product) => {
         const { title, price } = product.attributes;
         const dollarsAmount = formatAsDollars(price);
-        const image = productImages[idx]?.src;
+        const image = productImages.find((img) => img.id === product.id)?.src;
+
         return (
           <Link to={`/products/${product.id}`} key={product.id}>
             <Card>
