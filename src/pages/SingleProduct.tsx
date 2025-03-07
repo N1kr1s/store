@@ -1,4 +1,5 @@
 import { SelectProductAmount, SelectProductColor } from '@/components';
+import { Mode } from '@/components/SelectProductAmount';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { productImages } from '@/lib/productImages';
@@ -71,7 +72,11 @@ const SingleProduct = () => {
             setProductColor={setProductColor}
           />
           {/* AMOUNT */}
-          <SelectProductAmount />
+          <SelectProductAmount
+            mode={Mode.SingleProduct}
+            amount={amount}
+            setAmount={setAmount}
+          />
           {/* CART BUTTON */}
           <Button size='lg' className='mt-10' onClick={addToCart}>
             Add to bag
