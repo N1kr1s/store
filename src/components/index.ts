@@ -19,3 +19,5 @@ export { default as ProductsContainer } from './ProductsContainer';
 export { default as ProductsGrid } from './ProductsGrid';
 export { default as ProductsList } from './ProductsList';
 export { default as SectionTitle } from './SectionTitle';
+export { default as SelectProductAmount } from './SelectProductAmount';
+export { default as SelectProductColor } from './SelectProductColor';

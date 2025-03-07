@@ -8,16 +8,17 @@ const ProductsList = () => {
   return (
     <div className='mt-12 grid gap-y-8'>
       {products.map((product) => {
-        const { title, price, company } = product.attributes;
+        const { title, price, company, image } = product.attributes;
         const dollarsAmount = formatAsDollars(price);
-        const image = productImages.find((img) => img.id === product.id)?.src;
+        const img =
+          productImages.find((img) => img.id === product.id)?.src || image;
 
         return (
           <Link key={product.id} to={`/products/${product.id}`}>
             <Card>
               <CardContent className='p-8 gap-y-4 grid md:grid-cols-3 '>
                 <img
-                  src={image}
+                  src={img}
                   alt={title}
                   className='h-64 w-full md:h-48  md:w-48  rounded-md object-cover'
                 />

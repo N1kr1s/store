@@ -16,4 +16,9 @@ export const productImages = [
   { name: 'streamlined_table', src: '/streamlined_table.jpg', id: 14 },
   { name: 'sectional_sofa', src: '/sectional_sofa.jpg', id: 25 },
   { name: 'velvet_sofa', src: '/velvet_sofa.jpg', id: 17 },
+  { name: 'minimalist_shelves ', src: '/minimalist_shelves.jpg', id: 11 },
+  { name: 'modern_sofa', src: '/modern_sofa.jpg', id: 5 },
+  { name: 'reclining_sofa', src: '/reclining_sofa.jpg', id: 18 },
+  { name: 'toy_shelf', src: '/toy_shelf.jpg', id: 23 },
+  { name: 'wooden_shelves', src: '/wooden_shelves.jpg', id: 8 },
 ];
