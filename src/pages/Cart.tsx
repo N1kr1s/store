@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Cart() {
   // temp
-  const user = null;
+  const user = useAppSelector((state) => state.userState.user);
 
   const numItemsInCart = useAppSelector(
     (state) => state.cartState.numItemsInCart
@@ -17,21 +17,20 @@ function Cart() {
   return (
     <>
       <SectionTitle text='Shopping Cart' />
-      <div className='mt-8 grid gap-8  lg:grid-cols-12'>
-        <div className='lg:col-span-8 '>
+      <div className='mt-8 grid gap-8 lg:grid-cols-12'>
+        <div className='lg:col-span-8'>
           <CartItemsList />
         </div>
         <div className='lg:col-span-4 lg:pl-4'>
           <CartTotals />
-          {user ? (
-            <Button asChild className='mt-8 w-full'>
-              <Link to='/checkout'>Proceed to checkout</Link>
-            </Button>
-          ) : (
-            <Button asChild className='mt-8 w-full'>
+
+          <Button asChild className='mt-8 w-full'>
+            {user ? (
+              <Link to='/checkout'> Proceed to checkout</Link>
+            ) : (
               <Link to='/login'>Please Login</Link>
-            </Button>
-          )}
+            )}
+          </Button>
         </div>
       </div>
     </>

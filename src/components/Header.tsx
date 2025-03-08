@@ -1,21 +1,27 @@
-import { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '@/hooks';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 
-function Header() {
+import { toast } from 'sonner';
+import { clearCart } from '../features/cart/cartSlice';
+import { logoutUser } from '../features/user/userSlice';
+
+const Header = () => {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const [user, setUser] = useState<{ username: string } | null>({
-    username: 'demo user',
-  });
+  const user = useAppSelector((state) => state.userState.user);
 
   const handleLogout = () => {
-    setUser(null);
+    dispatch(clearCart());
+    dispatch(logoutUser());
+    toast('Logged out');
     navigate('/');
   };
 
   return (
     <header>
       <div className='align-element flex justify-center sm:justify-end py-2'>
+        {/* USER */}
         {user ? (
           <div className='flex gap-x-2 sm:gap-x-8 items-center'>
             <p className='text-xs sm:text-sm'>Hello, {user.username}</p>
@@ -36,5 +42,5 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 export default Header;
