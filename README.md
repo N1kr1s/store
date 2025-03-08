@@ -12,3 +12,6 @@ It uses:
   - errorElement
   - Loaders
 - [Shadcn UI](https://ui.shadcn.com/)
+- [JWT](https://jwt.io/)
+  - register
+  - login

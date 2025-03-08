@@ -23,3 +23,4 @@ export { default as ProductsList } from './ProductsList';
 export { default as SectionTitle } from './SectionTitle';
 export { default as SelectProductAmount } from './SelectProductAmount';
 export { default as SelectProductColor } from './SelectProductColor';
+export { default as SubmitBtn } from './SubmitBtn';
