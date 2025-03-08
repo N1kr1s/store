@@ -34,6 +34,7 @@ export const action =
       cartItems,
       numItemsInCart,
     };
+
     try {
       await customFetch.post(
         '/orders',
