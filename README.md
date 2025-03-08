@@ -11,6 +11,7 @@ It uses:
   - createBrowserRouter
   - errorElement
   - Loaders
+  - protected routes
 - [Shadcn UI](https://ui.shadcn.com/)
 - [JWT](https://jwt.io/)
   - register
