@@ -1,5 +1,7 @@
 # Store project
 
+> This is a project where you can buy products. Login and add them to the cart,filter them.Checkout what you have bought and make an order.
+
 It uses:
 
 - [Vite](https://vitejs.dev/)
